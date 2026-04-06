@@ -20,7 +20,7 @@ services:
       - key: OPENAI_API_KEY
         scope: run
       - key: CORS_ORIGIN
-        value: https://your-frontend-url.vercel.app
+        value: https://ai-system-designer.vercel.app
       - key: REQUEST_TIMEOUT
         value: "30000"
       - key: MAX_REQUEST_SIZE
