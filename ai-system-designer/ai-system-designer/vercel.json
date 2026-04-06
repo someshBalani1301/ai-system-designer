@@ -4,6 +4,11 @@
   "devCommand": "npm run dev",
   "framework": "vite",
   "env": {
-    "VITE_API_URL": "@vite_api_url"
+    "VITE_API_URL": {
+      "required": true
+    },
+    "VITE_API_TIMEOUT": {
+      "default": "30000"
+    }
   }
 }
