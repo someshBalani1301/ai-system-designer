@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: ai-system-designer-backend
+    env: node
+    plan: free
+    startCommand: npm start
+    buildCommand: npm install
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+      - key: OPENROUTER_API_KEY
+        scope: run
+      - key: OPENAI_API_KEY
+        scope: run
+      - key: CORS_ORIGIN
+        value: https://your-frontend-url.vercel.app
+      - key: REQUEST_TIMEOUT
+        value: "30000"
+      - key: MAX_REQUEST_SIZE
+        value: "1mb"
+      - key: RATE_LIMIT_WINDOW_MS
+        value: "900000"
+      - key: RATE_LIMIT_MAX_REQUESTS
+        value: "100"
