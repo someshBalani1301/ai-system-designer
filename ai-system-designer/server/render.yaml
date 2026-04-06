@@ -27,7 +27,7 @@ services:
 
       # Update this to your Vercel frontend URL after deploying frontend
       - key: CORS_ORIGIN
-        value: https://your-frontend-url.vercel.app
+        value: https://ai-system-designer.vercel.app
 
       - key: REQUEST_TIMEOUT
         value: "30000"
