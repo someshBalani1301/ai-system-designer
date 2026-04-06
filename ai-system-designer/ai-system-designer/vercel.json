@@ -2,13 +2,5 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "devCommand": "npm run dev",
-  "framework": "vite",
-  "env": {
-    "VITE_API_URL": {
-      "required": true
-    },
-    "VITE_API_TIMEOUT": {
-      "default": "30000"
-    }
-  }
+  "framework": "vite"
 }
