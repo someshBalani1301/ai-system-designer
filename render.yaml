@@ -1,42 +1,31 @@
 # Render.com Infrastructure Configuration
-# Upload this repo to Render and it will auto-configure everything
+# This file must be at the repository root for Render to detect it
 
 services:
   - type: web
     name: ai-system-designer-backend
     runtime: node
     plan: free
+    rootDir: ai-system-designer/server
     buildCommand: npm install
     startCommand: npm start
 
-    # Environment Variables - Configure these in Render Dashboard
     envVars:
       - key: NODE_ENV
         value: production
-
       - key: PORT
         value: "5000"
-
-      # Add your API keys in Render Dashboard (Settings > Environment)
-      # These are NOT stored in this file for security
       - key: OPENROUTER_API_KEY
         scope: run
-
       - key: OPENAI_API_KEY
         scope: run
-
-      # Update this to your Vercel frontend URL after deploying frontend
       - key: CORS_ORIGIN
         value: https://your-frontend-url.vercel.app
-
       - key: REQUEST_TIMEOUT
         value: "30000"
-
       - key: MAX_REQUEST_SIZE
         value: "1mb"
-
       - key: RATE_LIMIT_WINDOW_MS
         value: "900000"
-
       - key: RATE_LIMIT_MAX_REQUESTS
         value: "100"
